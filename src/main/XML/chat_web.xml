@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web-app xmlns="http://www.example.com/web" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.example.com/web XSDweb.xsd">
+    <display-name>Web Chat</display-name>
+    <users>
+        <user>
+            <nick>Alexandr</nick>
+            <role>ADMIN</role>
+        </user>
+        <user>
+            <nick>Michael</nick>
+            <role>USER</role>
+        </user>
+
+        <user>
+            <nick>nick</nick>
+            <role>USER</role>
+        </user>
+    </users>
+    <messages>
+        <message>
+            <user_from>Michael</user_from>
+            <time_stamp>2021-04-24 17:17:33</time_stamp>
+            <text/>
+            <status>LOGIN</status>
+        </message>
+        <message>
+            <user_from>Alexandr</user_from>
+            <time_stamp>2021-04-24 12:49:53</time_stamp>
+            <text/>
+            <status>LOGIN</status>
+        </message>
+        <message>
+            <user_from>Alexandr</user_from>
+            <time_stamp>2014-11-21 15:00:02</time_stamp>
+            <text>Hi!</text>
+            <status>MESSAGE</status>
+        </message>
+        <message>
+            <user_from>Michael</user_from>
+            <time_stamp>2021-04-24 12:35:49</time_stamp>
+            <text>Hi, Alexandr!</text>
+            <status>MESSAGE</status>
+        </message>
+        <message>
+            <user_from>Alexandr</user_from>
+            <time_stamp>2021-04-24 12:35:49</time_stamp>
+            <text/>
+            <status>LOGOUT</status>
+        </message>
+        <message>
+            <user_from>Michael</user_from>
+            <time_stamp>2021-04-24 12:35:49</time_stamp>
+            <text/>
+            <status>LOGOUT</status>
+        </message>
+        <message>
+            <user_from>nick</user_from>
+            <time_stamp>2021-04-29 22:15:33</time_stamp>
+            <text>nick entered the chat</text>
+            <status>LOGIN</status>
+        </message>
+        <message>
+            <user_from>nick</user_from>
+            <time_stamp>2021-05-02 18:10:06</time_stamp>
+            <text>nick</text>
+            <status>KICK</status>
+        </message>
+    </messages>
+</web-app>

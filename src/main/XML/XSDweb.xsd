@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/web"
+        xmlns:ths="http://www.example.com/web"
+        elementFormDefault="qualified">
+
+
+    <element name="web-app">
+        <complexType>
+            <sequence>
+                <element name="display-name" type="string"/>
+                <element ref="ths:users"/>
+                <element ref="ths:messages"/>
+
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="messages">
+        <complexType>
+            <sequence>
+                <element name="message"
+                         type="ths:Message"
+                         minOccurs="0"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="users">
+        <complexType>
+            <sequence>
+                <element name="user"
+                         type="ths:User"
+                         minOccurs="1"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Message">
+        <sequence>
+            <element name="user_from" type="string"/>
+            <element name="time_stamp" type="string"/>
+            <element name="text" type="string"/>
+            <element name="status" type="ths:Status"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="Status">
+        <restriction base="string">
+            <enumeration value="LOGIN"/>
+            <enumeration value="MESSAGE"/>
+            <enumeration value="KICK"/>
+            <enumeration value="LOGOUT"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Role">
+        <restriction base="string">
+            <enumeration value="ADMIN"/>
+            <enumeration value="USER"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="User">
+        <sequence>
+            <element name="nick" type="string"/>
+            <element name="role" type="ths:Role"/>
+        </sequence>
+    </complexType>
+</schema>

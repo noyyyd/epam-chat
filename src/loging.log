@@ -1,0 +1,14 @@
+2021-05-17 20:50:58 ERROR MySqlUserDAO:204 - Data retrieval error
+java.sql.SQLException: Subquery returns more than 1 row
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1198)
+	at com.epam.chat.datalayer.db.MySqlUserDAO.getAllLogged(MySqlUserDAO.java:195)
+	at com.epam.chat.Main.main(Main.java:44)
+2021-05-17 20:53:28 ERROR MySqlUserDAO:204 - Data retrieval error
+java.sql.SQLException: Subquery returns more than 1 row
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1198)
+	at com.epam.chat.datalayer.db.MySqlUserDAO.getAllLogged(MySqlUserDAO.java:195)
+	at com.epam.chat.Main.main(Main.java:44)
